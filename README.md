@@ -38,13 +38,6 @@
 - 修改方法  
   下载和管理员运行[set-isr-cpu0.bat](./bin/set-isr-cpu0.bat)  
 
-然后把CPU0的超线程弃用调度，同时还能阻止系统插手节能CPU0，让ISR永远低延迟处理  
-- 修改方法  
-  下载和管理员运行[set-isr-cpu0-reserved.bat](./bin/set-isr-cpu0-reserved.bat)  
-
-> [!NOTE]  
-> 对于没有超线程的CPU，不需要运行这个  
-
 建议也把tick中断来源设置为强制LAPIC，确保阻止系统意外调用主板的慢速tick  
 - 修改方法  
   下载和管理员运行[set-isr-lapic.bat](./bin/set-isr-lapic.bat)  
