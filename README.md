@@ -33,24 +33,6 @@
   更稳的刷新率意思是把刷新率调整到`像素频率`不超过显示器面板带载上限  
   注意`DSC`技术和自定义刷新率不兼容，但是`FreeSync`会很好补缺这块短板  
 
-## 关闭MPO
-系统的MPO功能会在游戏高GPU负载时影响低GPU负载程序的画面更新，出现画面残留  
-关闭这个功能可以缓解  
-
-[set-mpo-disabled.bat ]: ./bin/set-mpo-disabled.bat
-[reset-mpo-default.bat]: ./bin/reset-mpo-default.bat
-
-- 修改方法  
-  下载和管理员运行[set-mpo-disabled.bat]  
-- 重置修改  
-  下载和管理员运行[reset-mpo-default.bat]  
-
-> [!IMPORTANT]  
-> 需要重启生效  
-
-> [!NOTE]  
-> 运行一次即整个系统永久保持，不需要加入开机自启  
-
 ## 锁定ISR到CPU0
 把ISR锁定到CPU0处理，可以防止ISR轮流到不同CPU核心反复重新调度的延迟，尤其是鼠标的ISR收益会更大  
 - 修改方法  
@@ -81,6 +63,24 @@
 > 运行一次即整个系统永久保持，不需要加入开机自启  
 
 祝AMD用户摆脱鼠标粘滞感  
+
+## 关闭MPO
+系统的MPO功能会在游戏高GPU负载时影响低GPU负载程序的画面更新，出现画面残留  
+关闭这个功能可以缓解  
+
+[set-mpo-disabled.bat ]: ./bin/set-mpo-disabled.bat
+[reset-mpo-default.bat]: ./bin/reset-mpo-default.bat
+
+- 修改方法  
+  下载和管理员运行[set-mpo-disabled.bat]  
+- 重置修改  
+  下载和管理员运行[reset-mpo-default.bat]  
+
+> [!IMPORTANT]  
+> 需要重启生效  
+
+> [!NOTE]  
+> 运行一次即整个系统永久保持，不需要加入开机自启  
 
 ## 全局计时器精度
 重新开启全局同步的最高计时器精度，可以让每个程序的中断计时器获得同等的最高精度  
